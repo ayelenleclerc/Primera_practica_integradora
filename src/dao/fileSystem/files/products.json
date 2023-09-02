@@ -1,0 +1,92 @@
+[
+	{
+		"title": "Bananina",
+		"description": "Bananita bañada en chocolate",
+		"stock": "50",
+		"thumbnail": "https://res.cloudinary.com/ayelenleclerc/image/upload/v1657515917/Suarez/Productos/felfort/felfort_bananina_ipihb0.jpg",
+		"category": "Felfort",
+		"price": "150.23",
+		"code": "fel001",
+		"id": 1
+	},
+	{
+		"title": "Monedas Pirata",
+		"description": "Monedas de chocolate",
+		"stock": "120",
+		"thumbnail": "https://res.cloudinary.com/ayelenleclerc/image/upload/v1657515919/Suarez/Productos/felfort/felfort_monedas_pirata_rxdhw9.jpg",
+		"category": "Felfort",
+		"price": "60.5",
+		"code": "fel002",
+		"id": 2
+	},
+	{
+		"title": "Tivis",
+		"description": "Cubanito bañado, relleno de chocolate",
+		"stock": "90",
+		"thumbnail": "https://res.cloudinary.com/ayelenleclerc/image/upload/v1657515919/Suarez/Productos/felfort/felfort_tivis_c70jfl.jpg",
+		"category": "Felfort",
+		"price": "125.69",
+		"code": "fel003",
+		"id": 3
+	},
+	{
+		"title": "Mentitas",
+		"description": "Medallon de menta bañado en chocolate",
+		"stock": "150",
+		"thumbnail": "https://res.cloudinary.com/ayelenleclerc/image/upload/v1657515919/Suarez/Productos/felfort/felfort_mentitas_x7lmdt.jpg",
+		"category": "Felfort",
+		"price": "95.87",
+		"code": "fel004",
+		"id": 4
+	},
+	{
+		"title": "Ferrero Rocher",
+		"description": "Ferrero Rocher Corazón ",
+		"stock": "250",
+		"thumbnail": "https://res.cloudinary.com/ayelenleclerc/image/upload/v1657515920/Suarez/Productos/ferrero/ferrero_corazon_jjr6uk.jpg",
+		"category": "Ferrero",
+		"price": "1250",
+		"code": "fer002",
+		"id": 6
+	},
+	{
+		"title": "Kinder Sorpresa",
+		"description": "Huevos de chocolate con sorpresa",
+		"stock": "2400",
+		"thumbnail": "https://res.cloudinary.com/ayelenleclerc/image/upload/v1657515921/Suarez/Productos/ferrero/kinder/kinder_huevo_qvp9ha.jpg",
+		"category": "Kinder",
+		"price": "450",
+		"code": "kin001",
+		"id": 7
+	},
+	{
+		"title": "Kinder Bueno White",
+		"description": "Kinder Bueno White x2",
+		"stock": "250",
+		"thumbnail": "https://res.cloudinary.com/ayelenleclerc/image/upload/v1657515921/Suarez/Productos/ferrero/kinder/kinder_bueno_white_tbai2w.jpg",
+		"category": "Kinder",
+		"price": "549.35",
+		"code": "kin002",
+		"id": 8
+	},
+	{
+		"title": "Jorgito",
+		"description": "Alfajor Jorgito Negro",
+		"stock": "90",
+		"thumbnail": "https://res.cloudinary.com/ayelenleclerc/image/upload/v1657515925/Suarez/Productos/jorgito/jorgito_jorgito_negro_eajdai.jpg",
+		"category": "Jorgito",
+		"price": "100",
+		"code": "jor001",
+		"id": 9
+	},
+	{
+		"title": "Jorgito",
+		"description": "Alfagor Jorgito Blanco",
+		"stock": "90",
+		"thumbnail": "https://res.cloudinary.com/ayelenleclerc/image/upload/v1657515924/Suarez/Productos/jorgito/jorgito_jorgito_blanco_it9hek.jpg",
+		"category": "Jorgito",
+		"price": "100",
+		"code": "jor002",
+		"id": 10
+	}
+]
