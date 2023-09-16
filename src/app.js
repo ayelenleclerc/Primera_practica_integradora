@@ -22,9 +22,9 @@ app.set("view engine", "handlebars");
 app.set("views", `${__dirname}/views`);
 
 //rutas
+app.use("/", viewsRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
-app.use("/", viewsRouter);
 
 const httpServer = app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
