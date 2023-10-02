@@ -1,44 +1,22 @@
 import productModel from "../models/product.model.js";
 
 export default class ProductManager {
-  getProducts = async () => {
-    try {
-      return await productModel.find().lean();
-    } catch (err) {
-      return err;
-    }
+  getProducts = (params) => {
+    return productModel.find(params).lean();
   };
-
-  getProductById = async (id) => {
-    try {
-      return await productModel.findById(id);
-    } catch (err) {
-      return { error: err.message };
-    }
+  paginateProducts = (params, paginateOptions) => {
+    return productModel.paginate(params, paginateOptions);
   };
-
-  addProduct = async (product) => {
-    try {
-      await productModel.create(product);
-      return await productModel.findOne({ title: product.title });
-    } catch (err) {
-      return err;
-    }
+  getProductBy = (params) => {
+    return productModel.findOne(params).lean();
   };
-
-  updateProduct = async (id, product) => {
-    try {
-      return await productModel.findByIdAndUpdate(id, { $set: product });
-    } catch (err) {
-      return err;
-    }
+  createProduct = (product) => {
+    return productModel.create(product);
   };
-
-  deleteProduct = async (id) => {
-    try {
-      return await productModel.findByIdAndDelete(id);
-    } catch (err) {
-      return err;
-    }
+  updateProduct = (id, product) => {
+    return productModel.updateOne({ _id: id }, { $set: product });
+  };
+  deleteProduct = (id) => {
+    return productModel.deleteOne({ _id: id });
   };
 }

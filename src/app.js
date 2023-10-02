@@ -1,11 +1,19 @@
 import express from "express";
 import { Server } from "socket.io";
+import mongoose from "mongoose";
 import handlebars from "express-handlebars";
+import cookieParser from "cookie-parser";
+import config from "./config/config.js";
+
 import productsRouter from "./routes/products.router.js";
 import cartsRouter from "./routes/carts.router.js";
 import viewsRouter from "./routes/views.router.js";
-import { __dirname } from "./utils.js";
-import "./dao/mongo/dbConfig.js";
+import SessionsRouter from "./routes/SessionsRouter.js";
+
+import cartSetter from "./middlewares/cartSetter.js";
+import __dirname from "./utils.js";
+import initializePassportStrategies from "./config/passport.config.js";
+
 import ProductManager from "./dao/mongo/managers/productManager.js";
 import ChatManager from "./dao/mongo/managers/chatManager.js";
 
@@ -13,23 +21,32 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(`${__dirname}/public`));
+const connection = mongoose.connect(
+  "mongodb+srv://Ayelenleclerc:yuskia13@backend.xrrgkdz.mongodb.net/PruebaLogin?retryWrites=true&w=majority"
+);
 
 app.engine("handlebars", handlebars.engine());
 app.set("view engine", "handlebars");
 app.set("views", `${__dirname}/views`);
 
+app.use(express.static(`${__dirname}/public`));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(cartSetter);
+
+initializePassportStrategies();
+
 //rutas
+app.use("/", viewsRouter);
+app.use("/api/sessions", SessionsRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
-app.use("/", viewsRouter);
 
 const httpServer = app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
-// const prodManager = new ProductManager(__dirname + "/files/products.json");
+
 const socketServer = new Server(httpServer);
 
 const prodManager = new ProductManager();
