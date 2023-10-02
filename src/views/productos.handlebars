@@ -1,7 +1,7 @@
 <h1 class="title">Productos</h1>
 <div class="container" id="container">
 
-  {{#each products}}
+  {{#each products.docs}}
     <div class="card" id={{this.id}}>
       <div class="card-body">
         <img class="card-img" src={{this.thumbnail}} alt={{this.title}} />
