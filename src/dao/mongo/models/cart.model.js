@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-
 const collection = "carts";
 
 const productSubSchema = new mongoose.Schema(

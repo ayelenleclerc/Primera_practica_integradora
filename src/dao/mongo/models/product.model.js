@@ -41,6 +41,7 @@ const schema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+schema.plugin(mongoosePaginate);
 
 schema.plugin(mongoosePaginate);
 const productModel = mongoose.model(collection, schema);

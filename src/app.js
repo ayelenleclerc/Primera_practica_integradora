@@ -38,8 +38,6 @@ app.use(cartSetter);
 initializePassportStrategies();
 
 //rutas
-app.use("/", viewsRouter);
-app.use("/api/sessions", SessionsRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
 
